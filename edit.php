@@ -8,10 +8,11 @@ if(isset($_POST['update']))
 
     $Nama=$_POST['Nama'];
     $Kuantitas=$_POST['Kuantitas'];
+    $Satuan=$_POST['Satuan'];
 	$Keterangan=$_POST['Keterangan'];
 
     // update data
-    $result = mysqli_query($mysqli, "UPDATE databarang SET Nama='$Nama',Kuantitas='$Kuantitas',Keterangan='$Keterangan' WHERE ID=$ID");
+    $result = mysqli_query($mysqli, "UPDATE databarang SET Nama='$Nama',Kuantitas='$Kuantitas',Satuan='$Satuan',Keterangan='$Keterangan' WHERE ID=$ID");
 
     // Redirect to homepage to display updated data in list
     header("Location: show.php");
@@ -29,6 +30,7 @@ while($databarang_data = mysqli_fetch_array($result))
 {
     $Nama = $databarang_data['Nama'];
     $Kuantitas = $databarang_data['Kuantitas'];
+    $Satuan = $databarang_data['Satuan'];
 	$Keterangan = $databarang_data['Keterangan'];
 }
 ?>
@@ -50,6 +52,10 @@ while($databarang_data = mysqli_fetch_array($result))
             <tr> 
                 <td>Kuantitas</td>
                 <td><input type="text" name="Kuantitas" value=<?php echo $Kuantitas;?>></td>
+            </tr>
+            <tr> 
+                <td>Satuan</td>
+                <td><input type="text" name="Satuan" value=<?php echo $Satuan;?>></td>
             </tr>
             <tr> 
                 <td>Keterangan</td>
