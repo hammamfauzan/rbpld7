@@ -24,7 +24,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM databarang ORDER BY ID DESC");
         echo "<td>".$databarang_data['Nama']."</td>";
         echo "<td>".$databarang_data['Kuantitas']."</td>";
         echo "<td>".$databarang_data['Keterangan']."</td>";
-        echo "<td><a href='edit.php?id=$databarang_data[ID]'>Edit</a> | <a href='delete.php?id=$databarang_data[ID]'>Delete</a></td></tr>";        
+        echo "<td><a href='edit.php?ID=$databarang_data[ID]'>Edit</a> | <a href='delete.php?ID=$databarang_data[ID]'>Delete</a></td></tr>";        
     }
     ?>
     </table>
