@@ -9,10 +9,13 @@ $result = mysqli_query($mysqli, "SELECT * FROM databarang ORDER BY ID DESC");
 <html>
 <head>    
     <title>Daftar Barang</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-
 <body>
+    <div class="list">
     <h3>Daftar Barang</h3>
+    </br>
     <table width='80%' border=1>
 
     <tr>
@@ -28,8 +31,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM databarang ORDER BY ID DESC");
     }
     ?>
     </table>
-    <br/>
-    <br/>
     <a href="index.php">Tambahkan Data Barang Baru</a>
+    </div>
 </body>
 </html>

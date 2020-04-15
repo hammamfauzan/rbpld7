@@ -3,9 +3,13 @@
 <html>
     <head>
         <title>Input Form</title>
+        <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-    <a href="show.php">Klik untuk Melihat Data Barang</a>
+        <div class="container">
+    <a href="show.php">Daftar Barang</a>
+    <br/></br>
         <form method="post" action="index.php">
             <table>
                 <tr><td>Nama</td><td><input type="text" name="Nama"></td></tr>
@@ -34,5 +38,6 @@
         echo "<a href='show.php'> Lihat Data Barang</a>";
     }
     ?>
+    </div>
     </body>
 </html>

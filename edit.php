@@ -35,12 +35,13 @@ while($databarang_data = mysqli_fetch_array($result))
 <html>
 <head>  
     <title>Edit Data Barang</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-
 <body>
+    <div class="container">
     <a href="show.php">List Data Barang</a>
-    <br/><br/>
-
+    <br/>
     <form name="update_data" method="post" action="edit.php">
         <table>
             <tr> 
@@ -61,6 +62,7 @@ while($databarang_data = mysqli_fetch_array($result))
             </tr>
         </table>
     </form>
+    </div>
 </body>
 </html>
 
