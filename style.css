@@ -1,0 +1,16 @@
+body {
+    font-size: 1.2rem;
+}
+.container {
+    font-size: 1.2rem;
+    max-width: 500px;
+    margin: auto;
+    margin-top: 5%;
+}
+.list {
+    margin-left: 18%;
+    margin-top: 5%;
+}
+table {
+    font-size: 1.2rem;
+}

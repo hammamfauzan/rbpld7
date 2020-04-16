@@ -37,36 +37,40 @@ while($databarang_data = mysqli_fetch_array($result))
 <html>
 <head>  
     <title>Edit Data Barang</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-    <a href="show.php">List Data Barang</a>
-    <br/><br/>
+    <div class="container">
+        <a href="show.php">List Data Barang</a>
+        <br/>
 
-    <form name="update_data" method="post" action="edit.php">
-        <table>
-            <tr> 
-                <td>Nama</td>
-                <td><input type="text" name="Nama" value='<?php echo $Nama;?>'></td>
-            </tr>
-            <tr> 
-                <td>Kuantitas</td>
-                <td><input type="text" name="Kuantitas" value=<?php echo $Kuantitas;?>></td>
-            </tr>
-            <tr> 
-                <td>Satuan</td>
-                <td><input type="text" name="Satuan" value=<?php echo $Satuan;?>></td>
-            </tr>
-            <tr> 
-                <td>Keterangan</td>
-                <td><input type="text" name="Keterangan" value=<?php echo $Keterangan;?>></td>
-            </tr>
-            <tr>
-                <td><input type="hidden" name="ID" value=<?php echo $_GET['ID'];?>></td>
-                <td><input type="submit" name="update" value="Update Data"></td>
-            </tr>
-        </table>
-    </form>
+        <form name="update_data" method="post" action="edit.php">
+            <table>
+                <tr> 
+                    <td>Nama</td>
+                    <td><input type="text" name="Nama" value='<?php echo $Nama;?>'></td>
+                </tr>
+                <tr> 
+                    <td>Kuantitas</td>
+                    <td><input type="text" name="Kuantitas" value=<?php echo $Kuantitas;?>></td>
+                </tr>
+                <tr> 
+                    <td>Satuan</td>
+                    <td><input type="text" name="Satuan" value=<?php echo $Satuan;?>></td>
+                </tr>
+                <tr> 
+                    <td>Keterangan</td>
+                    <td><input type="text" name="Keterangan" value=<?php echo $Keterangan;?>></td>
+                </tr>
+                <tr>
+                    <td><input type="hidden" name="ID" value=<?php echo $_GET['ID'];?>></td>
+                    <td><input type="submit" name="update" value="Update Data"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
 </body>
 </html>
 
