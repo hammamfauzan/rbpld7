@@ -16,7 +16,7 @@
                         <tr><td>Kuantitas</td><td><input type="text" class="form-control" name="Kuantitas"></td></tr>
                         <tr><td>Satuan</td><td><input type="text" class="form-control" name="Satuan"></td></tr>
                         <tr><td>Keterangan</td><td><input type="text" class="form-control" name="Keterangan"></td></tr>
-                        <td><input type="submit" class="form-control" name='Submit' value="Tambahkan Data Barang"></td>
+                        <tr><td><input type="submit" class="btn btn-success" name='Submit' value="Tambahkan Data Barang"></td></tr>
                     </table>
                 </form>
 
