@@ -7,15 +7,16 @@
     </head>
     <body>
         <div class="container">
-            <a href="show.php">Daftar Barang</a>
+            <a href="show.php" class="btn btn-primary">Daftar Barang</a>
+            <h1>Input Data Barang</h1>
             </br>
                 <form method="post" action="index.php">
                     <table>
-                        <tr><td>Nama</td><td><input type="text" name="Nama"></td></tr>
-                        <tr><td>Kuantitas</td><td><input type="text" name="Kuantitas"></td></tr>
-                        <tr><td>Satuan</td><td><input type="text" name="Satuan"></td></tr>
-                        <tr><td>Keterangan</td><td><input type="text" name="Keterangan"></td></tr>
-                        <td><input type="submit" name='Submit'value="Tambahkan Data Barang"></td>
+                        <tr><td>Nama</td><td><input type="text" class="form-control" name="Nama"></td></tr>
+                        <tr><td>Kuantitas</td><td><input type="text" class="form-control" name="Kuantitas"></td></tr>
+                        <tr><td>Satuan</td><td><input type="text" class="form-control" name="Satuan"></td></tr>
+                        <tr><td>Keterangan</td><td><input type="text" class="form-control" name="Keterangan"></td></tr>
+                        <td><input type="submit" class="form-control" name='Submit' value="Tambahkan Data Barang"></td>
                     </table>
                 </form>
 
@@ -34,9 +35,9 @@
                 $result = mysqli_query($mysqli, "INSERT INTO databarang(Nama,Kuantitas,Satuan,Keterangan) VALUES('$Nama','$Kuantitas','$Satuan','$Keterangan')");
 
                 // Show message when user added
-                echo "Data Barang Berhasil Ditambahkan <br/>";
+                echo "<br/><p class='alert alert-success'>Data Barang Berhasil Ditambahkan</p> <br/>";
 
-                echo "<a href='show.php'> Lihat Data Barang</a>";
+                echo "<a href='show.php' class='btn btn-primary'> Lihat Data Barang</a>";
             }
             ?>
         </div>

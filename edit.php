@@ -43,30 +43,31 @@ while($databarang_data = mysqli_fetch_array($result))
 
 <body>
     <div class="container">
-        <a href="show.php">List Data Barang</a>
+        <a class="btn btn-primary" href="show.php">List Data Barang</a>
         <br/>
-
+        <h1>Edit Data Barang </h1>
+        <br/>
         <form name="update_data" method="post" action="edit.php">
             <table>
                 <tr> 
                     <td>Nama</td>
-                    <td><input type="text" name="Nama" value='<?php echo $Nama;?>'></td>
+                    <td><input type="text" class="form-control" name="Nama" value='<?php echo $Nama;?>'></td>
                 </tr>
                 <tr> 
                     <td>Kuantitas</td>
-                    <td><input type="text" name="Kuantitas" value=<?php echo $Kuantitas;?>></td>
+                    <td><input type="text" class="form-control" name="Kuantitas" value=<?php echo $Kuantitas;?>></td>
                 </tr>
                 <tr> 
                     <td>Satuan</td>
-                    <td><input type="text" name="Satuan" value=<?php echo $Satuan;?>></td>
+                    <td><input type="text" class="form-control" name="Satuan" value=<?php echo $Satuan;?>></td>
                 </tr>
                 <tr> 
                     <td>Keterangan</td>
-                    <td><input type="text" name="Keterangan" value=<?php echo $Keterangan;?>></td>
+                    <td><input type="text" class="form-control" name="Keterangan" value=<?php echo $Keterangan;?>></td>
                 </tr>
                 <tr>
                     <td><input type="hidden" name="ID" value=<?php echo $_GET['ID'];?>></td>
-                    <td><input type="submit" name="update" value="Update Data"></td>
+                    <td><input type="submit" class="btn btn-success" name="update" value="Update Data"></td>
                 </tr>
             </table>
         </form>
