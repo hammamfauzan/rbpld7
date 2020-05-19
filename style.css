@@ -3,14 +3,26 @@ body {
 }
 .container {
     font-size: 1.2rem;
-    max-width: 500px;
-    margin: auto;
+    position: absolute;
+    left: 50%;
+    margin-left: -9.7%;
     margin-top: 5%;
 }
+.list .menu{
+    float: right;
+}
+.list label{
+    font-weight: 450;
+}
+.list input{
+    font-size: 1rem;
+}
 .list {
-    margin-left: 18%;
+    max-width: 70%;
+    margin: 0 auto;
     margin-top: 5%;
 }
 table {
     font-size: 1.2rem;
 }
+
