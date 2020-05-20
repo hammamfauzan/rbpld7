@@ -3,11 +3,11 @@
     <head>
         <title>Input Form</title>
         <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="styling.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-        <div class="container">
+        <div class="container" id="container">
             <a class="btn btn-primary" href="show.php"><i class="fa fa-list" aria-hidden="true"></i> Daftar Barang</a>
             <h1>Input Data Barang</h1>
             </br>
@@ -37,8 +37,7 @@
 
                 // Show message when user added
                 echo "<br/><p class='alert alert-success'>Data Barang Berhasil Ditambahkan</p> <br/>";
-
-                echo "<a href='show.php' class='btn btn-primary'> Lihat Data Barang</a>";
+                
             }
             ?>
         </div>

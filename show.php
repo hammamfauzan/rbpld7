@@ -9,39 +9,27 @@ $result = mysqli_query($mysqli, "SELECT * FROM databarang ORDER BY ID ASC");
 <html>
 <head>    
     <title>Daftar Barang</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
     <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="styling.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <div class="list">
-            <form action="search.php" method="get">
-                <input type="text" name="cari">
-                <input class= "btn btn-primary" type="submit" value="Cari">
-            </form>
-        
-            <?php 
-                if(isset($_GET['cari'])){
-                    $cari = $_GET['cari'];
-                }
-                if(isset($_GET['cari'])){
-                    $cari = $_GET['cari'];
-                    $data = mysqli_query($mysqli, "SELECT * FROM databarang WHERE Nama LIKE '%".$cari."%'");		
-                }else{
-                    $data = mysqli_query($mysqli, "SELECT * FROM databarang");
-                }
-            $no = 1
-        ?>
+    <div class="container">
             <div class="menu">
                 <a class="btn btn-primary" href="index.php"><i class="fa fa-plus" aria-hidden="true"></i> Tambahkan Data Barang Baru</a>
             </div>
             <h3>Daftar Barang</h3>
-        </br>
-        <table width='80%' border=2 class="table table-striped">
-        <tr>
-            <th>Nama</th> <th>Kuantitas</th> <th>Satuan</th> <th>Keterangan</th> <th>Action</th>
-        </tr>
+        <table border=2 class="table table-striped" id="datatables">
+        <thead>
+            <tr>
+                <th>Nama</th> <th>Kuantitas</th> <th>Satuan</th> <th>Keterangan</th> <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
         <?php  
         while($databarang_data = mysqli_fetch_array($result)) {         
             echo "<tr>";
@@ -53,7 +41,12 @@ $result = mysqli_query($mysqli, "SELECT * FROM databarang ORDER BY ID ASC");
         }
         ?>
         </table>
-        
+        <tbody>
     </div>
+    <<script>
+        $(document).ready(function() {
+            $('#datatables').DataTable();
+        } );
+    </script>
 </body>
 </html>

@@ -1,0 +1,13 @@
+body {
+    margin-top: 5%;
+}
+.container .menu{
+    float: right;
+}
+#container {
+    font-size: 1.2rem;
+    position: absolute;
+    left: 50%;
+    margin-left: -9.7%;
+    margin-top: 5%;
+}
