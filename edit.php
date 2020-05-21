@@ -15,7 +15,7 @@ if(isset($_POST['update']))
     $result = mysqli_query($mysqli, "UPDATE databarang SET Nama='$Nama',Kuantitas='$Kuantitas',Satuan='$Satuan',Keterangan='$Keterangan' WHERE ID=$ID");
 
     // Redirect to homepage to display updated data in list
-    header("Location: show.php?pesan=edit");
+    header("Location: show.php?pesan=edit_sukses");
 }
 ?>
 <?php
