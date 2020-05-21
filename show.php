@@ -1,11 +1,17 @@
 <?php
+session_start();
 // Create database connection using config file
 include_once("koneksi.php");
-
+$user="belum login";
+$user=$_SESSION['status'];
+$username=$_SESSION['Username'];
+$_SESSION['Username'] = $username;
+if($user!="login"){
+    header("location:index.php?pesan=belum_login");
+}
 // Fetch all users data from database
-$result = mysqli_query($mysqli, "SELECT * FROM databarang ORDER BY ID ASC");
-?>
-
+$result = mysqli_query($mysqli, "SELECT * FROM databarang WHERE user='$username' ORDER BY ID ASC"); 
+?> 
 <html>
 <head>    
     <title>Daftar Barang</title>
@@ -19,10 +25,26 @@ $result = mysqli_query($mysqli, "SELECT * FROM databarang ORDER BY ID ASC");
 
 <body>
     <div class="container">
+    <?php
+    if(isset($_GET['pesan'])){
+        if($_GET['pesan'] == "edit_sukses"){
+        echo "<a class='alert alert-success'>Data Barang Berhasil Diubah</a>";
+        }
+        else if($_GET['pesan'] == "delete_sukses"){
+        echo "<a class='alert alert-success'>Data Barang Berhasil Dihapus</a>";
+        }
+        else if($_GET['pesan'] == "login_sukses"){
+        echo "<a class='alert alert-success'>Login Berhasil</a>";
+        }
+    }
+    ?>
+        <p></p>
             <div class="menu">
-                <a class="btn btn-primary" href="index.php"><i class="fa fa-plus" aria-hidden="true"></i> Tambahkan Data Barang Baru</a>
+                <a class="btn btn-primary" href="add.php"><i class="fa fa-plus" aria-hidden="true"></i> Tambahkan Data Barang Baru</a>
+                <a class="btn btn-danger" href="logout.php">Logout</a>
             </div>
             <h3>Daftar Barang</h3>
+        
         <table border=2 class="table table-striped" id="datatables">
         <thead>
             <tr>

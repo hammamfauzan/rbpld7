@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: Apr 15, 2020 at 04:03 PM
--- Server version: 10.1.38-MariaDB
--- PHP Version: 7.3.2
+-- Host: 127.0.0.1
+-- Generation Time: May 21, 2020 at 12:24 PM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -34,18 +34,40 @@ CREATE TABLE `databarang` (
   `Kuantitas` int(255) NOT NULL,
   `Satuan` varchar(255) DEFAULT NULL,
   `Keterangan` varchar(255) DEFAULT NULL,
-  `Timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `Modified_Timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  `Timestamp` timestamp NOT NULL DEFAULT current_timestamp(),
+  `Modified_Timestamp` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `User` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `databarang`
 --
 
-INSERT INTO `databarang` (`ID`, `Nama`, `Kuantitas`, `Satuan`, `Keterangan`, `Timestamp`, `Modified_Timestamp`) VALUES
-(3, 'Pisang', 1, 'Sisir', 'Ini adalah Pisang', '2020-04-14 05:25:06', '2020-04-15 13:20:25'),
-(4, 'Lemon', 2, 'Kg', 'Ini adalah Lemon', '2020-04-15 13:02:19', '2020-04-15 13:20:44'),
-(5, 'Brokoli', 2, 'Kg', 'Ini adalah Brokoli', '2020-04-15 13:03:17', '2020-04-15 13:21:00');
+INSERT INTO `databarang` (`ID`, `Nama`, `Kuantitas`, `Satuan`, `Keterangan`, `Timestamp`, `Modified_Timestamp`, `User`) VALUES
+(15, 'Apel', 1, 'buah', 'busuk', '2020-05-21 09:33:08', '2020-05-21 09:33:08', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
+  `Namalengkap` varchar(255) NOT NULL,
+  `Username` varchar(255) NOT NULL,
+  `Password` varchar(255) NOT NULL,
+  `Email` varchar(255) NOT NULL,
+  `Notelepon` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `Namalengkap`, `Username`, `Password`, `Email`, `Notelepon`) VALUES
+(3, 'asdas', 'coba', 'coba', 'asdsad@gmail.com', 0),
+(4, 'asdas', 'user', 'coba', 'asdsad@gmail.com', 0);
 
 --
 -- Indexes for dumped tables
@@ -58,6 +80,12 @@ ALTER TABLE `databarang`
   ADD PRIMARY KEY (`ID`);
 
 --
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -65,7 +93,13 @@ ALTER TABLE `databarang`
 -- AUTO_INCREMENT for table `databarang`
 --
 ALTER TABLE `databarang`
-  MODIFY `ID` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `ID` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

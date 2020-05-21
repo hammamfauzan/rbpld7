@@ -15,7 +15,7 @@ if(isset($_POST['update']))
     $result = mysqli_query($mysqli, "UPDATE databarang SET Nama='$Nama',Kuantitas='$Kuantitas',Satuan='$Satuan',Keterangan='$Keterangan' WHERE ID=$ID");
 
     // Redirect to homepage to display updated data in list
-    header("Location: show.php");
+    header("Location: show.php?pesan=edit");
 }
 ?>
 <?php
@@ -75,87 +75,3 @@ while($databarang_data = mysqli_fetch_array($result))
     </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <!DOCTYPE html>
-<html>
-<head>
-	<title>Edit data</title>
-	
-</head>
-<body>
-	<h3>Edit data</h3>
- 
-	<?php 
-	include "koneksi.php";
-	$id = $_GET['id'];
-	$query_mysql = mysqli_query($conn,"select * from datamahasiswa2");
-	$nomor = 1;
-	while($data = mysqli_fetch_array($query_mysql)){
-	?>
-	<form action="update.php" method="post">		
-		<table>
-			<tr>
-				<td>Nama</td>
-				<td>
-					<input type="text" name="nama" value="<?php echo $data['nama'] ?>">
-				</td>					
-			</tr>	
-			<tr>
-				<td>NRP</td>
-				<td><input type="text" name="nrp" value="<?php echo $data['nrp'] ?>"></td>					
-            </tr>	
-            <tr>
-				<td>JENIS KELAMIN</td><td>
-                        <input type="radio" name="jeniskelamin" value="<?php echo $data['jeniskelamin'] ?>">Laki Laki
-                        <input type="radio" name="jeniskelamin" value="<?php echo $data['jeniskelamin'] ?>">Perempuan
-					</td>
-			</tr>
-			<tr>
-				<td>Departemen</td><td>
-                        <select name="departemen">
-                            <option value="<?php echo $data['departemen'] ?>">Informatika</option>
-                            <option value="<?php echo $data['departemen'] ?>">Sistem Informasi</option>
-                            <option value="<?php echo $data['departemen'] ?>">Teknologi Informasi</option>
-                        </select>
-				</td>
-			</tr>
-			<tr>
-				<td></td>
-				<td><input type="submit" value="Simpan"></td>					
-			</tr>				
-		</table>
-	</form>
-	<?php } ?>
-</body>
-</html> -->

@@ -9,5 +9,5 @@ $ID = $_GET['ID'];
 $result = mysqli_query($mysqli, "DELETE FROM databarang WHERE ID=$ID");
 
 // After delete redirect to Home, so that latest user list will be displayed.
-header("Location:show.php");
+header("Location:show.php?pesan=delete");
 ?>
