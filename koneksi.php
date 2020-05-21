@@ -1,8 +1,8 @@
 <?php
-$databaseHost = "localhost";
-$databaseName = "databarang";
-$databaseUsername = "root";
-$databasePassword = "";
+$databaseHost = "sql201.epizy.com";
+$databaseName = "epiz_25827226_databarang";
+$databaseUsername = "epiz_25827226";
+$databasePassword = "inventoryd7";
 
 $mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
 

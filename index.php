@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Login</title>
+    <title>Masuk</title>
 	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="styling.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -14,16 +14,13 @@
         <table>
             <tr>
                 <td>Username</td>
-                <td>:</td>
                 <td><input type="text" class="form-control" name="Username"></td>
             </tr>
             <tr>
                 <td>Password</td>
-                <td>:</td>
                 <td><input type="password" class="form-control" name="Password"></td>
             </tr>
             <tr>
-                <td></td>
                 <td></td>
                 <td><input type="submit" class="btn btn-success" value="Masuk"></td>
             </tr>
