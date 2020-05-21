@@ -17,6 +17,9 @@ if(isset($_POST['update']))
     // Redirect to homepage to display updated data in list
     header("Location: show.php?pesan=edit_sukses");
 }
+else{
+    header("Location: show.php?pesan=edit_gagal");
+}
 ?>
 <?php
 // Display selected data based on id

@@ -42,8 +42,10 @@ $username = $_SESSION['Username'];
 
                 // Show message when user added
                 echo "<br/><a class='alert alert-success'>Data Barang Berhasil Ditambahkan</a><br/>";
-                
-            }
+                }
+                else{
+                    echo "<br/><a class='alert alert-success'>Data Barang Gagal Ditambahkan</a><br/>";
+                }
             ?>
         </div>
     </body>
