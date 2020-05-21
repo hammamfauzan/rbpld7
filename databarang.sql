@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 21, 2020 at 12:24 PM
+-- Generation Time: May 21, 2020 at 12:33 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -44,7 +44,17 @@ CREATE TABLE `databarang` (
 --
 
 INSERT INTO `databarang` (`ID`, `Nama`, `Kuantitas`, `Satuan`, `Keterangan`, `Timestamp`, `Modified_Timestamp`, `User`) VALUES
-(15, 'Apel', 1, 'buah', 'busuk', '2020-05-21 09:33:08', '2020-05-21 09:33:08', '');
+(17, 'Apel', 1, 'buah', 'busuk', '2020-05-21 10:27:40', '2020-05-21 10:27:40', 'coba'),
+(18, 'Anggur', 2, 'buah', 'segar', '2020-05-21 10:27:47', '2020-05-21 10:27:47', 'coba'),
+(19, 'strawbeerry', 10, 'buah', 'segar', '2020-05-21 10:27:54', '2020-05-21 10:27:54', 'coba'),
+(20, 'Jeruk', 5, 'gram', 'segar', '2020-05-21 10:28:08', '2020-05-21 10:28:08', 'coba'),
+(21, 'pisang', 1, 'kg', 'pisang', '2020-05-21 10:28:28', '2020-05-21 10:28:28', 'coba'),
+(22, 'jambu', 1, 'buah', 'biji', '2020-05-21 10:29:39', '2020-05-21 10:29:39', 'coba'),
+(23, 'belimbing', 5, 'kg', 'belimbing', '2020-05-21 10:30:06', '2020-05-21 10:30:06', 'coba'),
+(24, 'apel', 2, 'kg', 'fuji', '2020-05-21 10:30:59', '2020-05-21 10:30:59', 'coba'),
+(25, 'apel', 1, 'kg', 'malang', '2020-05-21 10:31:07', '2020-05-21 10:31:07', 'coba'),
+(26, 'jeruk', 10, 'buah', 'peras', '2020-05-21 10:31:27', '2020-05-21 10:31:27', 'coba'),
+(27, 'jeruk', 1, 'gram', 'mandarin', '2020-05-21 10:31:49', '2020-05-21 10:31:49', 'coba');
 
 -- --------------------------------------------------------
 
@@ -93,7 +103,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `databarang`
 --
 ALTER TABLE `databarang`
-  MODIFY `ID` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `ID` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `user`
